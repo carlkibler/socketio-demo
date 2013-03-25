@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>{% block title %}Ping Pong{% endblock %}</title>
+    {% block extra_css %}{% endblock %}
+    <script src="{{ STATIC_URL }}js/jquery-latest.min.js"></script>
+    <script src="{{ STATIC_URL|default:MEDIA_URL }}js/socket.io.js"></script>
+    <script>WEB_SOCKET_SWF_LOCATION="{{ STATIC_URL }}flashsocket/WebSocketMain.swf";</script>
+    <script src="{{ STATIC_URL }}js/pingpong.js"></script>
+
+</head>
+<body>
+    <div id="main">{% block main %}{% endblock %}</div>
+
+</body>

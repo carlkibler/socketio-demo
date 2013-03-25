@@ -1,0 +1,3 @@
+-e git+git@github.com:carschar/gevent-socketio.git#egg=gevent-socketio
+django-extensions
+
