@@ -1,9 +1,8 @@
-from socketio import socketio_manage
+from django.shortcuts import render
 
-from django.http import HttpResponse
-from django.contrib.auth.decorators import user_passes_test
-from django.shortcuts import get_object_or_404, render, redirect
-
+# This is a *necessary* import! Loading this alerts the gevent-socketio
+# library to build the SocketIO namespace. Remove it and nothing will
+# answer the incoming client calls.
 from sockets import PingPongNamespace
 
 def table(request, template="table.html"):
